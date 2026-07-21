@@ -104,9 +104,10 @@ private fun PremiumNavItem(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
+        val columnScope = this
         Box(contentAlignment = Alignment.Center) {
             // Selection indicator pill
-            AnimatedVisibility(
+            columnScope.AnimatedVisibility(
                 visible = isSelected,
                 enter = fadeIn(tween(200)) + scaleIn(
                     initialScale = 0.6f,

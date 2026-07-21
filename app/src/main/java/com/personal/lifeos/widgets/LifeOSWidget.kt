@@ -96,7 +96,7 @@ class LifeOSWidget : GlanceAppWidget() {
                 // ── Quick Action ──
                 Button(
                     text = "✨ Quick Add",
-                    onClick = androidx.glance.action.actionStartActivity(
+                    onClick = androidx.glance.appwidget.action.actionStartActivity(
                         android.content.Intent(context, com.personal.lifeos.MainActivity::class.java).apply {
                             putExtra("OPEN_TAB", "money")
                         }

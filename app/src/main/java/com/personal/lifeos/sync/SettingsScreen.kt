@@ -22,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
+import androidx.work.ExistingPeriodicWorkPolicy
 import com.personal.lifeos.ui.components.PremiumTopBar
 import com.personal.lifeos.ui.theme.*
 import java.util.concurrent.TimeUnit
@@ -129,10 +130,14 @@ fun SettingsScreen(
                             if (it) {
                                 // Enable periodic sync worker
                                 val syncRequest = PeriodicWorkRequestBuilder<SyncWorker>(12, TimeUnit.HOURS).build()
-                                WorkManager.getInstance(context).enqueue(syncRequest)
+                                WorkManager.getInstance(context).enqueueUniquePeriodicWork(
+                                    "supabase_sync",
+                                    ExistingPeriodicWorkPolicy.KEEP,
+                                    syncRequest
+                                )
                             } else {
                                 // Cancel sync worker
-                                WorkManager.getInstance(context).cancelAllWorkByName("supabase_sync")
+                                WorkManager.getInstance(context).cancelUniqueWork("supabase_sync")
                             }
                         },
                         colors = SwitchDefaults.colors(
