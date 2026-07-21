@@ -108,8 +108,6 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
 
-    ksp("androidx.hilt:hilt-compiler:1.1.0")
-
     // Retrofit & OkHttp (for AI Service)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
