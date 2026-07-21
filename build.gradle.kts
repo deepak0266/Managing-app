@@ -1,16 +1,15 @@
-buildscript {
-    ext {
-        compose_version = "1.5.4"
-        room_version = "2.6.1"
-        hilt_version = "2.50"
-        work_version = "2.9.0"
-        retrofit_version = "2.9.0"
-        kotlin_version = "1.9.22"
-    }
-}
 plugins {
     id("com.android.application") version "8.2.2" apply false
     id("org.jetbrains.kotlin.android") version "1.9.22" apply false
     id("com.google.dagger.hilt.android") version "2.50" apply false
     id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
 }
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+val compose_version by extra("1.5.4")
+val room_version by extra("2.6.1")
+val hilt_version by extra("2.50")
+val work_version by extra("2.9.0")
+val retrofit_version by extra("2.9.0")
+val kotlin_version by extra("1.9.22")
+

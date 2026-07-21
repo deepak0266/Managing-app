@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android")
     id("com.google.devtools.ksp")
+    kotlin("kapt")
     kotlin("plugin.serialization") version "1.9.22"
 }
 
@@ -36,10 +37,10 @@ android {
         }
         
         // Read keys from local.properties if they exist, otherwise use dummy values (for compilation)
-        val properties = java.util.Properties()
+        val properties = Properties()
         val localPropertiesFile = rootProject.file("local.properties")
         if (localPropertiesFile.exists()) {
-            properties.load(java.io.FileInputStream(localPropertiesFile))
+            properties.load(FileInputStream(localPropertiesFile))
         }
         val openApiKey = properties.getProperty("OPENAI_API_KEY") ?: "missing_key"
         
@@ -132,14 +133,14 @@ dependencies {
 
     // CameraX
     val camerax_version = "1.3.1"
-    implementation("androidx.camera:camera-core:\${camerax_version}")
-    implementation("androidx.camera:camera-camera2:\${camerax_version}")
-    implementation("androidx.camera:camera-lifecycle:\${camerax_version}")
-    implementation("androidx.camera:camera-view:\${camerax_version}")
+    implementation("androidx.camera:camera-core:${camerax_version}")
+    implementation("androidx.camera:camera-camera2:${camerax_version}")
+    implementation("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation("androidx.camera:camera-view:${camerax_version}")
     
     // Supabase
     val supabase_version = "2.4.0"
-    implementation("io.github.jan-tennert.supabase:postgrest-kt:\${supabase_version}")
+    implementation("io.github.jan-tennert.supabase:postgrest-kt:${supabase_version}")
     implementation("io.ktor:ktor-client-android:2.3.8")
 
     // Widgets - Glance
