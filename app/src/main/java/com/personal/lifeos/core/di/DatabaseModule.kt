@@ -26,8 +26,8 @@ object DatabaseModule {
     fun provideLifeOSDatabase(
         @ApplicationContext context: Context
     ): LifeOSDatabase {
-        // SQLCipher init (required for older versions, though modern ones often do it automatically, good practice to ensure)
-        System.loadLibrary("sqlcipher")
+        // SQLCipher init
+        SQLiteDatabase.loadLibs(context)
         
         val passphrase = KeyStoreHelper.getOrGenerateDatabasePassphrase().toByteArray()
         val supportFactory = SupportFactory(passphrase)

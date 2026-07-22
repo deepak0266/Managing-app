@@ -35,6 +35,7 @@ import com.personal.lifeos.ui.animation.premiumEnterTransition
 import com.personal.lifeos.ui.animation.premiumExitTransition
 import com.personal.lifeos.ui.animation.premiumPopEnterTransition
 import com.personal.lifeos.ui.animation.premiumPopExitTransition
+import androidx.hilt.navigation.compose.hiltViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
@@ -182,19 +183,19 @@ fun LifeOSApp(
                 modifier = Modifier.padding(innerPadding)
             ) {
                 composable("reminders") {
-                    val viewModel: com.personal.lifeos.reminders.ui.RemindersViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+                    val viewModel: com.personal.lifeos.reminders.ui.RemindersViewModel = hiltViewModel()
                     RemindersScreen(viewModel = viewModel)
                 }
                 composable("money") {
-                    val viewModel: com.personal.lifeos.expenses.ui.ExpensesViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+                    val viewModel: com.personal.lifeos.expenses.ui.ExpensesViewModel = hiltViewModel()
                     ExpensesScreen(viewModel = viewModel)
                 }
                 composable("memory") {
-                    val viewModel: com.personal.lifeos.memory.ui.MemoryViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+                    val viewModel: com.personal.lifeos.memory.ui.MemoryViewModel = hiltViewModel()
                     MemoryScreen(viewModel = viewModel)
                 }
                 composable("habits") {
-                    val viewModel: com.personal.lifeos.habits.ui.HabitsViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+                    val viewModel: com.personal.lifeos.habits.ui.HabitsViewModel = hiltViewModel()
                     HabitsScreen(viewModel = viewModel)
                 }
                 composable("settings") {

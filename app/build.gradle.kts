@@ -37,12 +37,7 @@ android {
         }
         
         // Read keys from local.properties if they exist, otherwise use dummy values (for compilation)
-        val properties = Properties()
-        val localPropertiesFile = rootProject.file("local.properties")
-        if (localPropertiesFile.exists()) {
-            properties.load(FileInputStream(localPropertiesFile))
-        }
-        val openApiKey = properties.getProperty("OPENAI_API_KEY") ?: "missing_key"
+        val openApiKey = localProperties.getProperty("OPENAI_API_KEY") ?: "missing_key"
         
         buildConfigField("String", "OPENAI_API_KEY", "\"$openApiKey\"")
     }
