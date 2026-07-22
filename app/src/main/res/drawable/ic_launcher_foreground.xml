@@ -1,25 +1,115 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
     
-    <!-- Outer Ring -->
+    <!-- Ambient Subtle Outer Hex Shield Frame -->
     <path
-        android:pathData="M 54 20 C 35.2 20 20 35.2 20 54 C 20 72.8 35.2 88 54 88 C 72.8 88 88 72.8 88 54 C 88 35.2 72.8 20 54 20 Z"
-        android:strokeColor="#FFFFFF"
-        android:strokeWidth="6"/>
+        android:pathData="M 54,14 L 86,32.5 L 86,75.5 L 54,94 L 22,75.5 L 22,32.5 Z"
+        android:strokeWidth="1.5">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="22"
+                android:startY="14"
+                android:endX="86"
+                android:endY="94"
+                android:type="linear">
+                <item android:color="#60F59E0B" android:offset="0.0" />
+                <item android:color="#208B5CF6" android:offset="0.5" />
+                <item android:color="#70EC4899" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
 
-    <!-- Inner L -->
+    <!-- Concentric Premium Metallic Gold & Royal Violet Ring -->
     <path
-        android:pathData="M 44 38 L 44 64 L 64 64"
-        android:strokeColor="#03DAC6"
-        android:strokeWidth="8"
+        android:pathData="M 54,20 C 35.2,20 20,35.2 20,54 C 20,72.8 35.2,88 54,88 C 72.8,88 88,72.8 88,54 C 88,35.2 72.8,20 54,20 Z"
+        android:strokeWidth="2.5">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="20"
+                android:startY="20"
+                android:endX="88"
+                android:endY="88"
+                android:type="linear">
+                <item android:color="#FDE047" android:offset="0.0" /> <!-- Bright Gold -->
+                <item android:color="#CA8A04" android:offset="0.4" /> <!-- Deep Gold -->
+                <item android:color="#A855F7" android:offset="0.8" /> <!-- Royal Violet -->
+                <item android:color="#38BDF8" android:offset="1.0" /> <!-- Diamond Blue -->
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Sleek Geometric Monogram 'L' Stem & Base with Metallic Champagne Gold Gradient -->
+    <path
+        android:pathData="M 38,34 L 38,72 L 68,72"
+        android:strokeWidth="6"
         android:strokeLineCap="round"
-        android:strokeLineJoin="round"/>
+        android:strokeLineJoin="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="38"
+                android:startY="34"
+                android:endX="68"
+                android:endY="72"
+                android:type="linear">
+                <item android:color="#FFF7ED" android:offset="0.0" /> <!-- Champagne Platinum -->
+                <item android:color="#F59E0B" android:offset="0.5" /> <!-- Rich Amber Gold -->
+                <item android:color="#D97706" android:offset="1.0" /> <!-- Deep Bronze Gold -->
+            </gradient>
+        </aapt:attr>
+    </path>
 
-    <!-- AI Sparkle -->
+    <!-- Interlocking 'O' Loop Ring with Royal Violet-Diamond Gradient -->
     <path
-        android:pathData="M 70 30 L 74 40 L 84 44 L 74 48 L 70 58 L 66 48 L 56 44 L 66 40 Z"
-        android:fillColor="#9C27B0"/>
+        android:pathData="M 54,36 C 63.9,36 72,44.1 72,54 C 72,63.9 63.9,72 54,72 C 44.1,72 36,63.9 36,54 C 36,44.1 44.1,36 54,36 Z"
+        android:strokeWidth="4">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="36"
+                android:startY="36"
+                android:endX="72"
+                android:endY="72"
+                android:type="linear">
+                <item android:color="#E0E7FF" android:offset="0.0" /> <!-- Diamond Ice -->
+                <item android:color="#8B5CF6" android:offset="0.6" /> <!-- Royal Purple -->
+                <item android:color="#6D28D9" android:offset="1.0" /> <!-- Deep Sapphire Violet -->
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Primary Diamond 4-Point AI Sparkle Star -->
+    <path
+        android:pathData="M 72,25 L 75,33 L 83,36 L 75,39 L 72,47 L 69,39 L 61,36 L 69,33 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="61"
+                android:startY="25"
+                android:endX="83"
+                android:endY="47"
+                android:type="linear">
+                <item android:color="#FFFFFF" android:offset="0.0" /> <!-- Pure Diamond Flash -->
+                <item android:color="#FDE047" android:offset="0.45" /> <!-- Golden Glow -->
+                <item android:color="#C084FC" android:offset="1.0" /> <!-- Purple Halo -->
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Secondary Accent Diamond Sparkle -->
+    <path
+        android:pathData="M 32,27 L 33.5,31 L 37.5,32.5 L 33.5,34 L 32,38 L 30.5,34 L 26.5,32.5 L 30.5,31 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="26.5"
+                android:startY="27"
+                android:endX="37.5"
+                android:endY="38"
+                android:type="linear">
+                <item android:color="#FFFFFF" android:offset="0.0" />
+                <item android:color="#38BDF8" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
 </vector>

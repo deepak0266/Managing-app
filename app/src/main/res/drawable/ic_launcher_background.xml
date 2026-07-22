@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Obsidian Glass Dark Velvet Background -->
+    <path
+        android:pathData="M 0,0 L 108,0 L 108,108 L 0,108 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="108"
+                android:endY="108"
+                android:type="linear">
+                <item android:color="#0B0D1B" android:offset="0.0" />
+                <item android:color="#121026" android:offset="0.5" />
+                <item android:color="#06060C" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Subtle Radial Golden Amber Glow in Center -->
+    <path
+        android:pathData="M 54,18 C 73.88,18 90,34.12 90,54 C 90,73.88 73.88,90 54,90 C 34.12,90 18,73.88 18,54 C 18,34.12 34.12,18 54,18 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="40"
+                android:type="radial">
+                <item android:color="#20F59E0B" android:offset="0.0" />
+                <item android:color="#0D8B5CF6" android:offset="0.6" />
+                <item android:color="#00000000" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>
