@@ -37,12 +37,7 @@ android {
         }
         
         // Read keys from local.properties if they exist, otherwise use dummy values (for compilation)
-        val properties = Properties()
-        val localPropertiesFile = rootProject.file("local.properties")
-        if (localPropertiesFile.exists()) {
-            properties.load(FileInputStream(localPropertiesFile))
-        }
-        val openApiKey = properties.getProperty("OPENAI_API_KEY") ?: "missing_key"
+        val openApiKey = localProperties.getProperty("OPENAI_API_KEY") ?: "missing_key"
         
         buildConfigField("String", "OPENAI_API_KEY", "\"$openApiKey\"")
     }
@@ -107,8 +102,6 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.9.0")
     implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
-
-    ksp("androidx.hilt:hilt-compiler:1.1.0")
 
     // Retrofit & OkHttp (for AI Service)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
